@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout>
+  <Header />
+  <main id="main-content" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 2rem 4rem;background-color:#F5F1E8;">
+    <div style="max-width:540px;text-align:center;">
+      <p style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">Message Received</p>
+      <h1 style="font-size:clamp(2rem,4vw,3rem);font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;line-height:1.2;margin-bottom:1.5rem;">
+        Thank you for<br /><span style="font-style:italic;">reaching out.</span>
+      </h1>
+      <p style="font-size:1.0625rem;color:#4A3728;line-height:1.8;margin-bottom:2.5rem;">
+        I typically respond within 1&ndash;2 business days. I look forward to connecting with you.
+      </p>
+      <a href="/" style="display:inline-block;background-color:#2D5A3D;color:#F5F1E8;padding:1rem 2.75rem;border-radius:0.25rem;font-family:'Josefin Sans',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">
+        Back to Home
+      </a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

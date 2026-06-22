@@ -1,0 +1,83 @@
+---
+import { siteConfig } from '../../config/site';
+---
+
+<section id="contact" style="padding:6rem 0;background-color:#F5F1E8;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+
+    <div class="fade-up" style="margin-bottom:3.5rem;">
+      <h2 style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
+        Get in Touch
+      </h2>
+      <p style="font-size:clamp(2rem,4vw,3rem);font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;line-height:1.2;">
+        Let&rsquo;s find out if<br />
+        <span style="font-style:italic;">we&rsquo;re a good fit.</span>
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+
+      <!-- Contact Form -->
+      <div class="fade-left" style="padding:2.5rem;border:1px solid rgba(74,55,40,0.12);border-radius:0.25rem;">
+        <h3 style="font-size:1.5rem;font-family:'Cormorant Garamond',serif;color:#4A3728;margin-bottom:1.75rem;font-weight:500;">
+          Send a Message
+        </h3>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you"
+          style="display:flex;flex-direction:column;gap:1.25rem;"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+
+          <div>
+            <label style="display:block;font-family:'Josefin Sans',sans-serif;font-size:0.6875rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#2D5A3D;margin-bottom:0.5rem;">Name *</label>
+            <input type="text" name="name" required style="width:100%;padding:0.875rem 1rem;font-size:1rem;border:1px solid rgba(74,55,40,0.2);border-radius:0.25rem;background:transparent;color:#4A3728;font-family:'Josefin Sans',sans-serif;font-weight:300;" />
+          </div>
+
+          <div>
+            <label style="display:block;font-family:'Josefin Sans',sans-serif;font-size:0.6875rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#2D5A3D;margin-bottom:0.5rem;">Email *</label>
+            <input type="email" name="email" required style="width:100%;padding:0.875rem 1rem;font-size:1rem;border:1px solid rgba(74,55,40,0.2);border-radius:0.25rem;background:transparent;color:#4A3728;font-family:'Josefin Sans',sans-serif;font-weight:300;" />
+          </div>
+
+          <div>
+            <label style="display:block;font-family:'Josefin Sans',sans-serif;font-size:0.6875rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#2D5A3D;margin-bottom:0.5rem;">Phone (optional)</label>
+            <input type="tel" name="phone" style="width:100%;padding:0.875rem 1rem;font-size:1rem;border:1px solid rgba(74,55,40,0.2);border-radius:0.25rem;background:transparent;color:#4A3728;font-family:'Josefin Sans',sans-serif;font-weight:300;" />
+          </div>
+
+          <div>
+            <label style="display:block;font-family:'Josefin Sans',sans-serif;font-size:0.6875rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#2D5A3D;margin-bottom:0.5rem;">Message *</label>
+            <textarea name="message" required rows="5" style="width:100%;padding:0.875rem 1rem;font-size:1rem;border:1px solid rgba(74,55,40,0.2);border-radius:0.25rem;background:transparent;color:#4A3728;font-family:'Josefin Sans',sans-serif;font-weight:300;resize:vertical;min-height:140px;"></textarea>
+          </div>
+
+          <button type="submit" style="width:100%;padding:1rem;background-color:#2D5A3D;color:#F5F1E8;border:none;border-radius:0.25rem;font-family:'Josefin Sans',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;">
+            Send Message
+          </button>
+
+          <p style="font-size:0.8125rem;font-family:'Josefin Sans',sans-serif;font-weight:300;color:#6B5B4E;letter-spacing:0.04em;">
+            I typically respond within 1&ndash;2 business days.
+          </p>
+        </form>
+      </div>
+
+      <!-- Schedule -->
+      <div class="fade-right" style="padding:2.5rem;border:1px solid rgba(74,55,40,0.12);border-radius:0.25rem;">
+        <h3 style="font-size:1.5rem;font-family:'Cormorant Garamond',serif;color:#4A3728;margin-bottom:0.75rem;font-weight:500;">
+          Schedule a Consultation
+        </h3>
+        <p style="font-size:1rem;color:#4A3728;margin-bottom:1.5rem;line-height:1.75;">
+          Book a free 15-minute consultation to see if we&rsquo;re a good fit.
+        </p>
+        <!-- SimplePractice link goes here -->
+        <a href="#" id="schedule-link" style="display:inline-block;background-color:#2D5A3D;color:#F5F1E8;padding:1rem 2rem;border-radius:0.25rem;font-family:'Josefin Sans',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">
+          Book Online
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

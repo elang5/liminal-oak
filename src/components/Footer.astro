@@ -1,0 +1,28 @@
+---
+import { siteConfig } from '../config/site';
+const year = new Date().getFullYear();
+
+const itemStyle = `
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 232, 0.65);
+`;
+---
+
+<footer style="background-color:#4A3728;padding:1.25rem 1.5rem;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.5rem 2rem;">
+    <small style={`${itemStyle}color:rgba(245,241,232,0.5);`}>
+      &copy; {year} Elan Green PLLC
+    </small>
+    <address style="font-style:normal;display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem 2rem;">
+      <span style={itemStyle}>{siteConfig.author.name}, {siteConfig.author.credentials}</span>
+      <span style={itemStyle}>{siteConfig.location.city}, {siteConfig.location.state}</span>
+      <a href={`mailto:${siteConfig.author.email}`} style={`${itemStyle}text-decoration:none;`}>
+        {siteConfig.author.email}
+      </a>
+    </address>
+  </div>
+</footer>

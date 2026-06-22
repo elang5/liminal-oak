@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import { siteConfig } from '../config/site';
+
+const title = `${siteConfig.name} | ${siteConfig.author.name}, ${siteConfig.author.credentials}`;
+const { description, url, name } = siteConfig;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": name,
+  "description": description,
+  "url": url,
+  "telephone": "",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": siteConfig.location.city,
+    "addressRegion": siteConfig.location.state,
+    "addressCountry": "US"
+  },
+  "priceRange": "$150"
+};
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="therapy, therapist, Seattle, Washington, PTSD, trauma, addiction, anxiety, somatic, depth psychology, transpersonal, LSWAIC, MSW, psychedelic integration" />
+    <meta name="author" content={siteConfig.author.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content={name} />
+    <meta property="og:title" content={name} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={name} />
+    <meta name="twitter:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <slot />
+    <script src="../scripts/animations.js"></script>
+  </body>
+</html>

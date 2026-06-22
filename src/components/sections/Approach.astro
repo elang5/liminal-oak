@@ -1,0 +1,61 @@
+---
+const pillars = [
+  {
+    number: '01',
+    title: 'Grounded in the Body',
+    description: 'Trauma lives in the body before it lives in words. We start by building the nervous system resources that make it safe to feel — settling, orienting, and developing the capacity to stay present with difficult experience rather than brace against it.',
+    items: ['Nervous system resourcing', 'Trauma processing', 'Embodied presence'],
+  },
+  {
+    number: '02',
+    title: 'Rooted in Relationship',
+    description: 'Once there is enough safety in the body, the deeper layers can surface. Within the steadiness of the therapeutic relationship, we turn toward the parts of you that have been hidden or burdened — meeting them with curiosity rather than shame, and letting them be heard.',
+    items: ['Parts work', 'Inner child & protective parts', 'Relational healing'],
+  },
+  {
+    number: '03',
+    title: 'Reaching Toward Meaning',
+    description: 'As old burdens lift, something opens. Depth and transpersonal work help us follow that opening — toward purpose, values, and the larger questions of a life, including the careful preparation and integration of psychedelic experiences.',
+    items: ['Depth psychology', 'Transpersonal psychology', 'Psychedelic integration'],
+  },
+];
+---
+
+<section style="padding:7rem 0;background-color:#EDE8DB;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+
+    <div class="fade-up" style="margin-bottom:4rem;">
+      <h2 style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
+        My Approach
+      </h2>
+      <p style="font-size:clamp(2rem,4vw,3rem);font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;line-height:1.2;">
+        Healing that moves<br />
+        <span style="font-style:italic;">from the roots up.</span>
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;background-color:rgba(74,55,40,0.1);">
+      {pillars.map((pillar, i) => (
+        <div class="fade-up" data-delay={String(i + 1)} style="background-color:#EDE8DB;padding:2.75rem;">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:rgba(45,90,61,0.25);font-weight:600;line-height:1;margin-bottom:1.5rem;">
+            {pillar.number}
+          </p>
+          <h3 style="font-size:1.375rem;font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;margin-bottom:1rem;">
+            {pillar.title}
+          </h3>
+          <p style="font-size:1rem;color:#4A3728;line-height:1.8;margin-bottom:1.75rem;opacity:0.82;">
+            {pillar.description}
+          </p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;">
+            {pillar.items.map(item => (
+              <li style="font-family:'Josefin Sans',sans-serif;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:#2D5A3D;">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

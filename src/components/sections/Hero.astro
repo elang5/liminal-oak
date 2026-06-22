@@ -1,0 +1,34 @@
+---
+import { siteConfig } from '../../config/site';
+---
+
+<section id="home" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+
+  <!-- Parallax background -->
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=2074&q=80');background-size:cover;background-position:center;background-attachment:fixed;"></div>
+
+  <!-- Overlay -->
+  <div style="position:absolute;inset:0;background:rgba(18,14,10,0.44);"></div>
+
+  <!-- Content -->
+  <div style="position:relative;z-index:10;max-width:780px;margin:0 auto;padding:0 2rem;text-align:center;">
+    <p class="hero-eyebrow" style="font-family:'Josefin Sans',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,241,232,0.6);margin-bottom:1.5rem;">
+      {siteConfig.author.name}, {siteConfig.author.credentials}&nbsp;&nbsp;·&nbsp;&nbsp;{siteConfig.location.city}, {siteConfig.location.state}
+    </p>
+
+    <h1 class="hero-heading" style="font-size:clamp(2.75rem,7vw,5rem);font-family:'Cormorant Garamond',serif;color:#F5F1E8;font-weight:500;line-height:1.15;letter-spacing:0.01em;margin-bottom:1.75rem;">
+      Individual therapy<br />
+      <span style="font-style:italic;">for the whole person.</span>
+    </h1>
+
+    <p class="hero-body" style="font-size:clamp(0.9375rem,1.8vw,1.125rem);color:rgba(245,241,232,0.8);line-height:1.85;max-width:520px;margin:0 auto 2.75rem;font-family:'Josefin Sans',sans-serif;font-weight:300;">
+      Somatic, depth, and transpersonal therapy for adults moving through trauma, addiction, anxiety, and the thresholds of transformation. Specializing in psychedelic preparation and integration.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#contact" style="display:inline-block;background-color:#2D5A3D;color:#F5F1E8;padding:1rem 2.75rem;border-radius:0.25rem;font-family:'Josefin Sans',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">
+        Book a Free Consultation
+      </a>
+    </div>
+  </div>
+</section>

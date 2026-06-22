@@ -1,0 +1,66 @@
+---
+const specializations = [
+  'Psychedelic Preparation & Integration',
+  'PTSD & Trauma',
+  'Addiction & Recovery',
+  'Anxiety',
+  'Relationship Issues',
+  'Existential Distress & Finding Purpose',
+];
+
+const divider = '1px solid rgba(74,55,40,0.12)';
+---
+
+<section id="services" style="padding:7rem 0;background-color:#EDE8DB;">
+  <div style="max-width:900px;margin:0 auto;padding:0 2rem;">
+
+    <div class="fade-up" style="margin-bottom:4rem;">
+      <h2 style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
+        Services
+      </h2>
+      <p style="font-size:clamp(2rem,4vw,3rem);font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;line-height:1.2;">
+        Individual therapy<br />
+        <span style="font-style:italic;">for adults.</span>
+      </p>
+    </div>
+
+    <div class="fade-up" data-delay="1">
+      <ul style={`list-style:none;padding:0;margin:0;border-top:${divider};`}>
+        {specializations.map(item => (
+          <li style={`padding:1.125rem 0;border-bottom:${divider};font-size:1.0625rem;color:#4A3728;`}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Rates -->
+    <div class="fade-up" data-delay="2" style="margin-top:4.5rem;">
+      <p style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:2rem;">
+        Rates &amp; Insurance
+      </p>
+
+      <div style={`display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-bottom:2rem;border-bottom:${divider};margin-bottom:2rem;`}>
+        <span style="font-size:1.0625rem;color:#4A3728;">
+          Individual Therapy Session <span style="font-size:0.875rem;color:#6B5B4E;">(53 min)</span>
+        </span>
+        <span style="font-size:2.5rem;font-family:'Cormorant Garamond',serif;color:#2D5A3D;font-weight:500;flex-shrink:0;">
+          $150
+        </span>
+      </div>
+
+      <p style="font-size:1.0625rem;color:#4A3728;line-height:1.75;margin-bottom:1.5rem;">
+        I am a private-pay therapist. Payment is due at the time of service.
+      </p>
+
+      <p style="font-size:0.875rem;color:#6B5B4E;line-height:1.75;">
+        <strong style="color:#4A3728;font-weight:500;">Good Faith Estimate:</strong>{' '}
+        Under the No Surprises Act, you have the right to receive an estimate of expected costs before service.{' '}
+        <a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener noreferrer" style="color:#2D5A3D;text-decoration:underline;">
+          cms.gov/nosurprises
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>

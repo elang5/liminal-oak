@@ -1,0 +1,74 @@
+---
+import { siteConfig } from '../config/site';
+
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#contact', label: 'Contact' },
+];
+
+const navLinkStyle = `
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s, opacity 0.2s;
+  color: #4A3728;
+  opacity: 0.8;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+`;
+---
+
+<header>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:0 25px;">
+    <!-- Logo -->
+    <a href="#home" style="text-decoration:none;">
+      <span style="font-family:'Josefin Sans',sans-serif;font-size:1rem;font-weight:300;color:#4A3728;letter-spacing:0.15em;white-space:nowrap;">
+        {siteConfig.name}
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav style="display:flex;align-items:center;gap:2.5rem;" class="desktop-nav">
+      {navLinks.map(link => (
+        <a href={link.href} style={navLinkStyle} data-nav-link={link.href.replace('#', '')}>
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button id="menu-btn" aria-label="Open menu" style="display:none;background:none;border:none;cursor:pointer;padding:0.5rem;color:#4A3728;" class="mobile-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav overlay -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button id="menu-close" aria-label="Close menu" style="position:absolute;top:1.25rem;right:25px;background:none;border:none;cursor:pointer;padding:0.5rem;color:#4A3728;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  {navLinks.map(link => (
+    <a href={link.href} style="font-family:'Josefin Sans',sans-serif;font-size:1rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;color:#4A3728;">
+      {link.label}
+    </a>
+  ))}
+</div>
+
+<style>
+  @media (max-width: 767px) {
+    .desktop-nav { display: none !important; }
+    .mobile-btn  { display: block !important; }
+  }
+</style>
