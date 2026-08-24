@@ -36,11 +36,11 @@ const divider = '1px solid rgba(74,55,40,0.12)';
 
     <!-- Rates -->
     <div class="fade-up" data-delay="2" style="margin-top:4.5rem;">
-      <p style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:2rem;">
-        Rates &amp; Insurance
+      <p style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
+        Rates
       </p>
 
-      <div style={`display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-bottom:2rem;border-bottom:${divider};margin-bottom:2rem;`}>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-bottom:2rem;">
         <span style="font-size:1.0625rem;color:#4A3728;">
           Individual Therapy Session <span style="font-size:0.875rem;color:#6B5B4E;">(53 min)</span>
         </span>
@@ -53,13 +53,17 @@ const divider = '1px solid rgba(74,55,40,0.12)';
         I am a private-pay therapist. Payment is due at the time of service.
       </p>
 
-      <p style="font-size:0.875rem;color:#6B5B4E;line-height:1.75;">
-        <strong style="color:#4A3728;font-weight:500;">Good Faith Estimate:</strong>{' '}
-        Under the No Surprises Act, you have the right to receive an estimate of expected costs before service.{' '}
-        <a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener noreferrer" style="color:#2D5A3D;text-decoration:underline;">
-          cms.gov/nosurprises
-        </a>
-      </p>
+      <div id="good-faith-estimate" style={`padding-top:2rem;border-top:${divider};margin-top:2rem;`}>
+        <h3 style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
+          Good Faith Estimate
+        </h3>
+        <p style="font-size:0.9375rem;color:#4A3728;line-height:1.75;">
+          Under the federal No Surprises Act, you have the right to receive a Good Faith Estimate of the expected cost of services before your first session, and at any time upon request. I provide one to every client at scheduling. If you receive a bill at least $400 more than your Good Faith Estimate, you have the right to dispute it. Save a copy of your estimate. Learn more at{' '}
+          <a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener noreferrer" style="color:#2D5A3D;text-decoration:underline;">
+            cms.gov/nosurprises
+          </a>.
+        </p>
+      </div>
     </div>
 
   </div>
