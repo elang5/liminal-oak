@@ -1,7 +1,8 @@
 export const siteConfig = {
   name: "Liminal Oak Therapy",
-  description: "Individual therapy in Seattle, WA. Specializing in psychedelic preparation & integration, PTSD, addiction, anxiety, and existential distress. Elan Green, MSW, LSWAIC.",
+  description: "Telehealth therapy for adults in Washington. Complex trauma, addiction, and psychedelic preparation and integration with Elan Green, MSW, LSWAIC.",
   url: "https://liminaloaktherapy.com",
+  contactUrl: "https://elan-green.clientsecure.me/contact-widget",
   author: {
     name: "Elan Green",
     credentials: "MSW, LSWAIC",
