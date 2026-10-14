@@ -1,61 +1,41 @@
 ---
-const pillars = [
-  {
-    number: '01',
-    title: 'Grounded in the Body',
-    description: 'Trauma lives in the body before it lives in words. We start by building the nervous system resources that make it safe to feel — settling, orienting, and developing the capacity to stay present with difficult experience rather than brace against it.',
-    items: ['Nervous system resourcing', 'Trauma processing', 'Embodied presence'],
-  },
-  {
-    number: '02',
-    title: 'Rooted in Relationship',
-    description: 'Once there is enough safety in the body, the deeper layers can surface. Within the steadiness of the therapeutic relationship, we turn toward the parts of you that have been hidden or burdened — meeting them with curiosity rather than shame, and letting them be heard.',
-    items: ['Parts work', 'Inner child & protective parts', 'Relational healing'],
-  },
-  {
-    number: '03',
-    title: 'Reaching Toward Meaning',
-    description: 'As old burdens lift, something opens. Depth and transpersonal work help us follow that opening — toward purpose, values, and the larger questions of a life, including the careful preparation and integration of psychedelic experiences.',
-    items: ['Depth psychology', 'Transpersonal psychology', 'Psychedelic integration'],
-  },
+import OakRings from '../OakRings.astro';
+const commitments = [
+  { title: 'Meet you where you are', text: 'I listen without judgment and without presuming that I know best. We begin with what you bring and make room for what is difficult to put into words.' },
+  { title: 'Explore the edges of your growth', text: 'Together, we notice where you feel stuck, what has helped you get through, and what may be asking for attention. We approach those places with curiosity and respect for your pace.' },
+  { title: 'Support you in finding your way', text: 'As you come to understand yourself more fully, we explore what it means to live in closer alignment with your values and desires, including the choices and relationships that shape your everyday life.' },
 ];
 ---
-
-<section style="padding:7rem 0;background-color:#EDE8DB;">
-  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
-
-    <div class="fade-up" style="margin-bottom:4rem;">
-      <h2 style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
-        My Approach
-      </h2>
-      <p style="font-size:clamp(2rem,4vw,3rem);font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;line-height:1.2;">
-        Healing that moves<br />
-        <span style="font-style:italic;">from the roots up.</span>
-      </p>
+<section id="approach" class="section approach" aria-labelledby="approach-title">
+  <div class="container">
+    <div class="approach-grid liminal-introduction">
+      <div class="approach-intro">
+        <p class="eyebrow">Liminal Oak</p>
+        <h2 id="approach-title">The space<br /><em>between.</em></h2>
+        <OakRings />
+      </div>
+      <div class="prose liminal-copy">
+        <p>People arrive in therapy for different reasons, but often share a sense of being somewhere between the life they have known and something they cannot yet fully imagine. Familiar ways of coping may no longer work. Questions about who we are, what matters to us, and how we want to live can become difficult to set aside.</p>
+        <p>Liminal describes that space between. It can be disorienting and painful to find ourselves there. Therapy offers a place to explore it with another person, with enough trust and support to face what is emerging.</p>
+        <p>The oak is meaningful to me as an image of this process. An acorn carries the potential for a tree, but its growth depends on the conditions around it. Roots establish themselves, the trunk strengthens, and branches reach outward. In therapy, we may move among similar kinds of work: finding steadiness in the body, attending to parts of ourselves that have needed protection, and exploring meaning, purpose, and how we want to live. We return to these at different times, according to what life asks of us.</p>
+        <p>I believe there is a capacity within each of us that can help guide this process. Sometimes it is difficult to hear or trust. My role is to sit with you in that space, help you find your footing, and support you in listening more closely to yourself.</p>
+      </div>
     </div>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;background-color:rgba(74,55,40,0.1);">
-      {pillars.map((pillar, i) => (
-        <div class="fade-up" data-delay={String(i + 1)} style="background-color:#EDE8DB;padding:2.75rem;">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:rgba(45,90,61,0.25);font-weight:600;line-height:1;margin-bottom:1.5rem;">
-            {pillar.number}
-          </p>
-          <h3 style="font-size:1.375rem;font-family:'Cormorant Garamond',serif;color:#4A3728;font-weight:500;margin-bottom:1rem;">
-            {pillar.title}
-          </h3>
-          <p style="font-size:1rem;color:#4A3728;line-height:1.8;margin-bottom:1.75rem;opacity:0.82;">
-            {pillar.description}
-          </p>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;">
-            {pillar.items.map(item => (
-              <li style="font-family:'Josefin Sans',sans-serif;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:#2D5A3D;">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+    <div class="approach-grid approach-practice">
+      <div class="approach-intro">
+        <p class="eyebrow">The way we work</p>
+        <h2>Built around<br /><em>you.</em></h2>
+        <p>My approach is built around you specifically. I don&rsquo;t believe healing is one size fits all, and I don&rsquo;t presume to know what is best for you. What I can offer is depth of presence, a wide range of tools, and a genuine commitment to walking alongside you wherever that process leads.</p>
+      </div>
+      <div class="approach-list">
+        {commitments.map((commitment, i) => (
+          <article class="approach-item">
+            <span class="index" aria-hidden="true">0{i + 1}</span>
+            <div><h3>{commitment.title}</h3><p>{commitment.text}</p></div>
+          </article>
+        ))}
+        <p class="small-note">Informed by somatic and parts work, focusing assisted psychotherapy, and depth and transpersonal psychology, with harm reduction, elements of CBT, and psychoeducation where helpful.</p>
+      </div>
     </div>
-
   </div>
 </section>

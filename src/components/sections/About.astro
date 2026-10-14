@@ -1,76 +1,23 @@
----
-import { siteConfig } from '../../config/site';
----
-
-<section id="about" style="padding:6rem 0;background-color:#F5F1E8;">
-  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:4rem;align-items:start;">
-
-      <!-- Photo + credentials -->
-      <div class="fade-left">
-        <div style="position:relative;border-radius:0.25rem;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.09);">
-          <img
-            src="/images/about/headshot.jpg"
-            alt="Elan Green, MSW, LSWAIC - Therapist at Liminal Oak Therapy"
-            width="600"
-            height="450"
-            style="width:100%;height:auto;display:block;"
-            loading="lazy"
-          />
-        </div>
-
-        <div style="margin-top:2rem;">
-          <p style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1rem;">
-            Credentials
-          </p>
-          <ul style="list-style:none;padding:0;margin:0;border-top:1px solid rgba(74,55,40,0.1);">
-            <li style="padding:0.875rem 0;border-bottom:1px solid rgba(74,55,40,0.1);">
-              <p style="font-size:1.0625rem;font-weight:500;color:#4A3728;font-family:'Cormorant Garamond',serif;">BS, Psychology</p>
-              <p style="font-size:0.8125rem;font-family:'Josefin Sans',sans-serif;letter-spacing:0.06em;color:#6B5B4E;margin-top:0.2rem;">Bachelor of Science · University of Washington</p>
-            </li>
-            <li style="padding:0.875rem 0;border-bottom:1px solid rgba(74,55,40,0.1);">
-              <p style="font-size:1.0625rem;font-weight:500;color:#4A3728;font-family:'Cormorant Garamond',serif;">MSW</p>
-              <p style="font-size:0.8125rem;font-family:'Josefin Sans',sans-serif;letter-spacing:0.06em;color:#6B5B4E;margin-top:0.2rem;">Master of Social Work · University of Washington</p>
-            </li>
-            <li style="padding:0.875rem 0;border-bottom:1px solid rgba(74,55,40,0.1);">
-              <p style="font-size:1.0625rem;font-weight:500;color:#4A3728;font-family:'Cormorant Garamond',serif;">LSWAIC</p>
-              <p style="font-size:0.8125rem;font-family:'Josefin Sans',sans-serif;letter-spacing:0.06em;color:#6B5B4E;margin-top:0.2rem;">Licensed Social Worker Associate &ndash; Independent Clinical &middot; SWIA.SC.61683693</p>
-            </li>
-            <li style="padding:0.875rem 0;">
-              <p style="font-size:1.0625rem;font-weight:500;color:#4A3728;font-family:'Cormorant Garamond',serif;">Psychedelic Researcher</p>
-              <p style="font-size:0.8125rem;font-family:'Josefin Sans',sans-serif;letter-spacing:0.06em;color:#6B5B4E;margin-top:0.2rem;">
-                <a href="https://ntap.psychiatry.uw.edu/" target="_blank" rel="noopener noreferrer" style="color:#2D5A3D;">Center for Novel Therapeutics in Addictive Psychiatry</a> &middot; University of Washington &middot; 4 years
-              </p>
-            </li>
-          </ul>
-        </div>
+<section id="about" class="section about" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <figure class="portrait">
+      <img src="/images/about/headshot.jpg" alt="Elan Green" width="600" height="800" loading="lazy" />
+      <figcaption>Elan Green <span>MSW, LSWAIC</span></figcaption>
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">The person on the other side</p>
+      <h2 id="about-title">Hi, I&rsquo;m <em>Elan.</em></h2>
+      <div class="prose">
+        <p>My name, pronounced &ldquo;uh-LAWN,&rdquo; means &ldquo;oak tree&rdquo; in Hebrew, which inspired the name Liminal Oak.</p>
+        <p>I work with people carrying complex trauma, navigating addiction, or trying to make sense of a psychedelic experience. Many are deep thinkers who have reached the edges of what talking alone has offered them. Our work may also touch on moral injury, questions of meaning and purpose, and how to live with experiences that have challenged deeply held beliefs.</p>
+        <p>I bring warmth, reflection, and curiosity to our sessions. I listen to what you say and help you attend to what is happening as you say it. We might spend time with a sensation, give a protective part of you a voice, or stay with an emotion that hasn&rsquo;t had much room.</p>
       </div>
-
-      <!-- Bio -->
-      <div class="fade-right">
-        <p style="font-family:'Josefin Sans',sans-serif;font-size:0.875rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:#2D5A3D;margin-bottom:1.25rem;">
-          About
-        </p>
-        <h2 style="font-size:2rem;font-family:'Cormorant Garamond',serif;color:#4A3728;margin-bottom:2rem;line-height:1.3;font-weight:500;">
-          Hi, I&rsquo;m Elan.
-        </h2>
-
-        <div style="display:flex;flex-direction:column;gap:1.5rem;">
-          <p style="font-size:1.125rem;color:#4A3728;line-height:1.8;">
-            Many people come to me having already tried a great deal: talk therapy, medication, the books and the videos. They&rsquo;ve worked hard and still feel stuck, caught somewhere between who they&rsquo;ve been and who they&rsquo;re becoming.
-          </p>
-          <p style="font-size:1.125rem;color:#4A3728;line-height:1.8;">
-            That space between is where I work. I don&rsquo;t believe healing is about fixing what&rsquo;s broken; it&rsquo;s about rediscovering a wholeness that trauma, shame, and conditional love have buried but never erased. My approach moves from the ground up: first building safety and steadiness in the nervous system, then using the body as a map to surface and unburden what has been stored there, and finally opening toward meaning, purpose, and what becomes possible when the weight lifts.
-          </p>
-          <p style="font-size:1.125rem;color:#4A3728;line-height:1.8;">
-            I also specialize in psychedelic preparation and integration. Drawing on four years as a psychedelic researcher at the University of Washington, I offer grounded, clinically informed support for those preparing for or making meaning of a psychedelic experience, whether in a clinical trial, a retreat, or a personal context.
-          </p>
-          <p style="font-size:1.125rem;color:#4A3728;line-height:1.8;">
-            My name, Elan, means &ldquo;oak tree&rdquo; in Hebrew. Like the oak, I believe we grow strongest when we&rsquo;re deeply rooted: connected to our bodies, our stories, and something larger than ourselves.
-          </p>
-        </div>
+      <div class="credentials">
+        <p class="eyebrow">Background &amp; training</p>
+        <p>MSW &amp; BS in Psychology · University of Washington</p>
+        <p>Licensed Social Worker Associate – Independent Clinical<br /><span class="small-note">License SWIA.SC.61683693</span></p>
+        <p>I have worked in the psychedelic field for over five years, including research at the <a href="https://ntap.psychiatry.uw.edu/" target="_blank" rel="noopener noreferrer">University of Washington</a>. This work includes a study investigating psilocybin for post-traumatic stress disorder (PTSD) and alcohol use disorder (AUD) in military veterans and first responders.</p>
       </div>
-
     </div>
   </div>
 </section>

@@ -2,7 +2,8 @@
 import '../styles/global.css';
 import { siteConfig } from '../config/site';
 
-const title = `${siteConfig.name} | ${siteConfig.author.name}, ${siteConfig.author.credentials}`;
+const title = `${siteConfig.name} | Washington Telehealth | ${siteConfig.author.name}`;
+const canonical = new URL(Astro.url.pathname, siteConfig.url);
 const { description, url, name } = siteConfig;
 
 const structuredData = {
@@ -11,7 +12,6 @@ const structuredData = {
   "name": name,
   "description": description,
   "url": url,
-  "telephone": "",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": siteConfig.location.city,
@@ -27,14 +27,16 @@ const structuredData = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {Astro.url.pathname.startsWith('/thank-you') && <meta name="robots" content="noindex" />}
     <meta name="keywords" content="therapy, therapist, Seattle, Washington, PTSD, trauma, addiction, anxiety, somatic, depth psychology, transpersonal, LSWAIC, MSW, psychedelic integration" />
     <meta name="author" content={siteConfig.author.name} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={name} />
     <meta property="og:title" content={name} />
     <meta property="og:description" content={description} />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={name} />
     <meta name="twitter:description" content={description} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
