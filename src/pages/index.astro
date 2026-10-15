@@ -17,7 +17,11 @@ import Contact from '../components/sections/Contact.astro';
     <About />
     <Psychedelic />
     <Services />
-    <Contact />
   </main>
-  <Footer />
+  <div class="grove">
+    <canvas class="etch-trail" data-src="/images/woodland-reflection.jpg" data-flip data-surface=".contact" data-shield=".contact-content" data-dim-bottom="0.7" aria-hidden="true"></canvas>
+    <Contact />
+    <Footer />
+  </div>
 </BaseLayout>
+<script src="../scripts/etch-trail.js"></script>
